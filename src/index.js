@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Finma from './Finma';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import * as Realm from 'realm-web';
 
 async function main() {
@@ -27,7 +29,12 @@ async function main() {
   ReactDOM.render(
     <React.StrictMode>
       <ApolloProvider client={client}>
-        <App />
+      <Router>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/finma" element={<Finma />} />
+        </Routes>
+      </Router>
       </ApolloProvider>
     </React.StrictMode>,
     document.getElementById('root')
