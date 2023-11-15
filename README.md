@@ -1,8 +1,41 @@
 # MongoDB Atlas Vector Search Demo
 This demo is based on the blogpost from [Benjamin Flask](https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/)
 
-You can follow the instructions in this blogpost to create the backend on MongoDB Atlas and then you can use the React client out of this Project to play around with the Vector Search.
+You can create your own demo in just a few minutes using the `install.sh` script in the root of this repository. 
 
-For the React client just change the App-ID on line 11 in the index.js file and set the endpoint URL on line 17 in the same file to your own backend url which Atlas will present you on the GraphQL tab in the App Services.
+# How to spin up the demo
+> Everything works on an Atlas Free Tier. No Credit Card needed, free forever
 
-Then execute npm start to start your client. 
+1. Clone this repo and go to the directory
+```
+git clone https://github.com/phil2211/vector-search-demo && \
+cd vector-search-demo
+```
+2. Go to https://platform.openai.com/api-keys and create your own API key and paste this key to the `openai.key` file in the root of this project.
+
+```echo "your openai api key" > openai.key```
+
+3. You need the following prerequisits met to follow along
+- [MongoDB Atlas Account](https://cloud.mongodb.com) (Free account available, no credit card needed)
+- [Atlas CLI](https://www.mongodb.com/tools/atlas-cli)
+- [NodeJS](https://nodejs.org/)
+- [Realm CLI](https://www.mongodb.com/docs/atlas/app-services/cli/)
+---
+I use Homebrew to do this on MacOS. If you don't have Homebrew, please follow the very simple instructions on the [Hombrew](https://brew.sh/) website to install it. The command below will install all necessary tools at once. If you are using Windows or Linux, see the links above for installation instructions for each component.
+```
+brew tap mongodb/brew && \
+brew install mongodb-atlas-cli node npm
+```
+
+4. Install the [Realm CLI](https://www.mongodb.com/docs/atlas/app-services/cli/)
+```
+npm install -g mgeneratejs mongodb-realm-cli
+```
+- **Restart your shell to use it**
+---
+
+Now execute the `install.sh` script to spin up your own free MongoDB Atlas instance. Please wait until the cluster is deployed and the testdata is loaded. PLEASE DO NOT CTRL+C during that process.
+
+After ~5 minutes your browser should start on http://localhost:3000 and you can start asking natural language questions to query the movie database. You can also use [MongoDB Compass](https://www.mongodb.com/try/download/compass) to connect to your cluster directly to browse the data.
+
+Please feel free to contacte me if you have further questions or feedback to this demo.
