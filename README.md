@@ -15,6 +15,8 @@ cd vector-search-demo
 ```
 2. Go to https://platform.openai.com/api-keys and create your own API key and paste this key to the `openai.key` file in the root of this project.
 
+![OpenAI API Key](/assets/openAIKey.png)
+
 ```echo "your openai api key" > openai.key```
 
 3. You need the following prerequisits met to follow along
