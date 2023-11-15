@@ -7,14 +7,16 @@ import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/c
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import * as Realm from 'realm-web';
 
+const APP_ID = process.env.REACT_APP_REALMAPP;
+
 async function main() {
-  const app = new Realm.App({ id: "openai-nbsjr" }); // Replace with your Realm app ID
+  const app = new Realm.App({ id: APP_ID }); 
   const credentials = Realm.Credentials.anonymous(); // Or use another authentication method
   const user = await app.logIn(credentials);
 
   const client = new ApolloClient({
     link: new HttpLink({
-      uri: 'https://eu-central-1.aws.realm.mongodb.com/api/client/v2.0/app/openai-nbsjr/graphql', // Replace with your Realm GraphQL endpoint
+      uri: `https://eu-central-1.aws.realm.mongodb.com/api/client/v2.0/app/${APP_ID}/graphql`,
       fetch: async (uri, options) => {
         if (!options.headers) {
           options.headers = {};
