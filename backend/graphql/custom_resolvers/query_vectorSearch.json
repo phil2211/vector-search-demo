@@ -1,0 +1,60 @@
+{
+    "field_name": "vectorSearch",
+    "function_name": "queryVector",
+    "input_type": {
+        "properties": {
+            "endRow": {
+                "bsonType": "int"
+            },
+            "searchText": {
+                "bsonType": "string"
+            },
+            "startRow": {
+                "bsonType": "int"
+            }
+        },
+        "title": "GridQueryModel",
+        "type": "object"
+    },
+    "input_type_format": "custom",
+    "on_type": "Query",
+    "payload_type": {
+        "properties": {
+            "lastRow": {
+                "bsonType": "int"
+            },
+            "query": {
+                "bsonType": "string"
+            },
+            "rows": {
+                "bsonType": "array",
+                "items": {
+                    "bsonType": "object",
+                    "properties": {
+                        "_id": {
+                            "bsonType": "objectId"
+                        },
+                        "fullplot": {
+                            "bsonType": "string"
+                        },
+                        "plot": {
+                            "bsonType": "string"
+                        },
+                        "poster": {
+                            "bsonType": "string"
+                        },
+                        "title": {
+                            "bsonType": "string"
+                        },
+                        "year": {
+                            "bsonType": "int"
+                        }
+                    }
+                }
+            }
+        },
+        "title": "searchMovies",
+        "type": "object"
+    },
+    "payload_type_format": "custom"
+}

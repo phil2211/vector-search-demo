@@ -1,0 +1,10 @@
+[
+    {
+        "name": "updateVector",
+        "private": true
+    },
+    {
+        "name": "queryVector",
+        "private": false
+    }
+]

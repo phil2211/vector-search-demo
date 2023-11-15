@@ -1,0 +1,34 @@
+{
+    "name": "updateVectors",
+    "type": "DATABASE",
+    "config": {
+        "operation_types": [
+            "INSERT",
+            "UPDATE",
+            "REPLACE"
+        ],
+        "database": "sample_mflix",
+        "collection": "embedded_movies",
+        "service_name": "mongodb-atlas",
+        "match": {
+            "updateDescription.updatedFields.plot": {
+                "$exists": true
+            }
+        },
+        "project": {},
+        "full_document": true,
+        "full_document_before_change": false,
+        "unordered": true,
+        "skip_catchup_events": false,
+        "tolerate_resume_errors": false,
+        "maximum_throughput": false
+    },
+    "disabled": false,
+    "event_processors": {
+        "FUNCTION": {
+            "config": {
+                "function_name": "updateVector"
+            }
+        }
+    }
+}
