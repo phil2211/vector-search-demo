@@ -17,7 +17,9 @@ cd vector-search-demo
 
 ![OpenAI API Key](/assets/openAIKey.png)
 
-```echo "your openai api key" > openai.key```
+```
+echo "your openai api key" > openai.key
+```
 
 3. You need the following prerequisits met to follow along
 - [MongoDB Atlas Account](https://cloud.mongodb.com) (Free account available, no credit card needed)
