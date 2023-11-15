@@ -28,6 +28,6 @@ realm-cli login --api-key $(cat AtlasAPIKeys.txt | grep "Public API Key" | awk '
 realm-cli apps create --profile VectorSearchDemo -n VectorSearchDemo -l DE-FF -d LOCAL --local DeleteMe && \
 realm-cli secrets create --profile VectorSearchDemo -a VectorSearchDemo -n OpenAI_secret -v $(cat openai.key) && \  
 realm-cli push --local "backend" --include-package-json -y --profile VectorSearchDemo && \
-echo "REACT_APP_REALMAPP="$(realm-cli apps list --profile VectorSearchDemo | grep VectorSearchDemogridapp | awk '{print $1}') > .env.local && \
+echo "REACT_APP_REALMAPP="$(realm-cli apps list --profile VectorSearchDemo | grep vectorsearchdemo | awk '{print $1}') > .env.local && \
 echo "Please go to http://localhost:3000" && \
 npm install && npm start
