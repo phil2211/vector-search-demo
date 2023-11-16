@@ -5,7 +5,7 @@ This demo is based on the blogpost from [Benjamin Flask](https://www.mongodb.com
 
 You can create your own demo in just a few minutes using the `install.sh` script in the root of this repository. 
 
-![Demo Setup](/assets/demoSetup.png)
+![Demo Setup](/assets/demoSetup.gif)
 
 # How to spin up the demo
 > Everything works on an Atlas Free Tier. No Credit Card needed, free forever
