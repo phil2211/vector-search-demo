@@ -1,5 +1,3 @@
-![OpenAI API Key](/assets/setupProcess.gif)
-
 # MongoDB Atlas Vector Search Demo
 This demo is based on the blogpost from [Benjamin Flask](https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/)
 
@@ -45,5 +43,7 @@ npm install -g mgeneratejs mongodb-realm-cli
 Now execute the `install.sh` script to spin up your own free MongoDB Atlas instance. Please wait until the cluster is deployed and the testdata is loaded. PLEASE DO NOT CTRL+C during that process.
 
 After ~5 minutes your browser should start on http://localhost:3000 and you can start asking natural language questions to query the movie database. You can also use [MongoDB Compass](https://www.mongodb.com/try/download/compass) to connect to your cluster directly to browse the data.
+
+![OpenAI API Key](/assets/setupProcess.gif)
 
 Please feel free to contacte me if you have further questions or feedback to this demo.
