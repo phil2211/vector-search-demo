@@ -1,5 +1,5 @@
 # MongoDB Atlas Vector Search Demo
-This demo is based on the blogpost from [Benjamin Flask](https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/)
+This demo is based on the blogpost from [Benjamin Flast](https://www.mongodb.com/developer/products/atlas/semantic-search-mongodb-atlas-vector-search/)
 
 You can create your own demo in just a few minutes using the `install.sh` script in the root of this repository. 
 
