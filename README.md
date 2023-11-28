@@ -35,7 +35,7 @@ brew install mongodb-atlas-cli node npm
 
 4. Install the [Realm CLI](https://www.mongodb.com/docs/atlas/app-services/cli/)
 ```
-npm install -g mgeneratejs mongodb-realm-cli
+npm install -g mgeneratejs atlas-app-services-cli
 ```
 - **Restart your shell to use it**
 ---
